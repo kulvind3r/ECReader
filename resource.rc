@@ -1,0 +1,4 @@
+// ECReader Icon Resource
+// Place your icon.ico file in the same directory as this file
+
+IDI_ICON1 ICON "icon.ico"

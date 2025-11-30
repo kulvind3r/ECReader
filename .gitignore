@@ -1,0 +1,6 @@
+version.rc
+*.o
+build/*
+coderules.md
+CLAUDE.md
+.claude/*
