@@ -2,6 +2,10 @@
 
 **Read-only** Windows tool for reading Embedded Controller registers via PawnIO driver.
 
+#### :bangbang: CAUTION
+- **Claude Code / Sonnet - 4.5 assisted development. Author is not a C++ or embedded system dev. Use at your own risk.**
+- **Do not run multiple instances. Do not run during BIOS updates. Easy to forget if running in background.**
+
 ## Features
 
 - **Monitor mode**: Live 16×16 grid showing all 256 registers with change detection
