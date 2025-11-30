@@ -142,10 +142,28 @@ public:
     }
 
     bool LoadModule(const char* filename) {
-        if (verboseMode) printf("[Verbose] Loading module: %s\n", filename);
+        // Get executable directory and construct full path
+        char exePath[MAX_PATH];
+        char fullPath[MAX_PATH];
+
+        if (GetModuleFileNameA(NULL, exePath, MAX_PATH) == 0) {
+            if (verboseMode) printf("[Verbose] Warning: Failed to get exe path, trying relative: %s\n", filename);
+            strncpy_s(fullPath, MAX_PATH, filename, _TRUNCATE);
+        } else {
+            // Extract directory by finding last backslash
+            char* lastSlash = strrchr(exePath, '\\');
+            if (lastSlash != NULL) {
+                *lastSlash = '\0';  // Truncate at last backslash
+                snprintf(fullPath, MAX_PATH, "%s\\%s", exePath, filename);
+            } else {
+                strncpy_s(fullPath, MAX_PATH, filename, _TRUNCATE);
+            }
+        }
+
+        if (verboseMode) printf("[Verbose] Loading module: %s\n", fullPath);
 
         FILE* f = NULL;
-        if (fopen_s(&f, filename, "rb") != 0 || f == NULL) {
+        if (fopen_s(&f, fullPath, "rb") != 0 || f == NULL) {
             return false;
         }
 
