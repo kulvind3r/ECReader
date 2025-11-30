@@ -1,0 +1,13 @@
+# Set default behavior for files where specific rules aren't defined.
+# This tells Git to try to figure out what files are text and what are binary.
+* text=auto
+
+# Explicitly ensure all scripts (*.sh) use Line Feed (LF) endings,
+# which is required for execution in Linux/WSL environments.
+*.sh text eol=lf
+*.py text eol=lf
+*.pl text eol=lf
+
+# Optional: Explicitly treat certain files as binary to prevent any conversion.
+*.bin binary
+*.ico binary
