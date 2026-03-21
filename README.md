@@ -140,4 +140,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY.
 
 ## Credits
 
-Built using [PawnIO](https://pawnio.eu) driver for EC access.
+Built using [PawnIO](https://pawnio.eu) driver for EC access and [LibreHardwareMonitor](https://github.com/LibreHardwaRemonitor/LibreHardwareMonitor) for Implementation approaches on how to use PawnIO driver.
