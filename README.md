@@ -1,4 +1,9 @@
+<div align="center">
+  <img src="icon.ico" width="120" alt="ECReader">
+
 # ECReader
+
+</div>
 
 **Read-only** Windows tool for reading Embedded Controller registers via PawnIO driver.
 
